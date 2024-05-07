@@ -6,7 +6,7 @@ const AdminLogin = () => {
   let history = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/api/auth/loginadmin`, {
+    const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app/api/auth/loginadmin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
