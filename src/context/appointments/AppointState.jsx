@@ -15,7 +15,7 @@ const AppointState = (props) => {
   const [patient, setPatient] = useState(patientinit)
 
   const getAppoints = async () => {
-    const response = await fetch(`http://localhost:${host}/api/list/fetchallappointment`, {
+    const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/list/fetchallappointment`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const AppointState = (props) => {
   const addAppoints = async (name, doctor, mobile, adhaarno) => {
     // API CALL
     // eslint-disable-next-line
-    const response = await fetch(`http://localhost:${host}/api/auth/createappointment`, {
+    const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/auth/createappointment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const AppointState = (props) => {
 
   const delAppoints = async(id)=>{
     // eslint-disable-next-line
-    await fetch(`http://localhost:${host}/api/list/deleteappointment/${id}`,{
+    await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/list/deleteappointment/${id}`,{
       method: 'PUT',
       headers:{
         'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const AppointState = (props) => {
 
 //.....................................................................................
   const getPatients = async () => {
-    const response = await fetch(`http://localhost:${host}/api/list/fetchallpatient`, {
+    const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/list/fetchallpatient`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const AppointState = (props) => {
 
 
   const addPatients = async(id, description, problem, bed)=>{
-    const response = await fetch(`http://localhost:${host}/api/list/addpatient/${id}`,{
+    const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/list/addpatient/${id}`,{
       method: 'POST',
       headers:{
         'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const AppointState = (props) => {
 
   const delPatients = async(id)=>{
     // eslint-disable-next-line
-    await fetch(`http://localhost:${host}/api/list/deletepatient/${id}`,{
+    await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/list/deletepatient/${id}`,{
       method: 'PUT',
       headers:{
         'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const AppointState = (props) => {
   }
 //.....................................................................................
   const getDoctors = async()=>{
-    const response = await fetch(`http://localhost:${host}/api/list/fetchalldoctor`, {
+    const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/list/fetchalldoctor`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -121,14 +121,14 @@ const AppointState = (props) => {
     formdata.append('specialist',specialist)
     formdata.append('study',study)
     formdata.append('password',password)
-    await axios.post(`http://localhost:${host}/api/auth/createdoctoracc`,formdata,{
+    await axios.post(`https://digitalised-hospital-system-backend.vercel.app//api/auth/createdoctoracc`,formdata,{
       headers: {
             'Content-Type': `multipart/form-data`,
             // 'auth-token': localStorage.getItem('token')
           },
         
     })
-    // const response = await fetch(`http://localhost:${host}/api/auth/createdoctoracc`, {
+    // const response = await fetch(`https://digitalised-hospital-system-backend.vercel.app//api/auth/createdoctoracc`, {
     //   method: 'POST',
     //   headers: {
     //     'Content-Type': `multipart/form-data`,
