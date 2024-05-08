@@ -42,8 +42,8 @@ const Doctors = ({ appointment }) => {
         <div className='col-md-3 mb-2'>
             <div className="card" style={{ maxWidth: "18rem" }}>
                 {doctorImage && <img src={doctorImage} style={{ maxHeight: "11rem" }} className="card-img-top" alt={`Portrait of Dr. ${dname}`} />}
-                <div className="card-body">
-                    <h4 className="card-title">{dname}</h4>
+                <div className="card-body" style={{fontSize: "7vmin"}}>
+                    <h4 className="card-title"><b>{dname}</b></h4>
                     <h6 className="card-text">{specialist}</h6>
                     <h6 className="card-text">{study}</h6>
                     <h6 className="card-text">Contact: {mobile}</h6>
