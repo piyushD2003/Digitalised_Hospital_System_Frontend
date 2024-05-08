@@ -64,10 +64,10 @@ const AddAppoint = () => {
       <hr />
       <div className='container mt-5'>
         <div className='box m-2 p-3 border border-4 border-primary-subtle rounded-4'>
-          <div className="container m-2">
+          <div className="container m-3" style={{"display": "flex", "justify-content": "center"}}>
             <h1>Doctor</h1>
           </div>
-          <div className="row my-2 p-2">
+          <div className="row my-2 p-2" style={{"display": "flex", "justify-content": "center"}}>
             {doctor.map((appointment) => { return <Doctorlist key={appointment._id} appointment={appointment} /> })}
           </div>
         </div>
